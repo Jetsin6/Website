@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Myat - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Cube.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="menu">
+            <div><a href="index.html" class="dropdown-link">Home</a></div>
+            <div><a href="about.html" class="dropdown-link">About</a></div>
+            <div><a href="works.html" class="dropdown-link">Works</a></div>
+            <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close-button">X</span>
+            <h2 id="popupTitle" class="popupTitle"></h2>
+            <img id="popupImage" style="display:none;" alt="Project Image" />
+            <p id="popupDescription" class="popupDescription"></p>
+        </div>
+    </div>
+
+    <!-- Include Three.js and your custom script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
