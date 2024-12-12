@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Justin Myat | Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Cube.png" type="image/png">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="works.html">Works</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="no-scroll">
+    <div class="menu">
+        <div><a href="index.html" class="dropdown-link">Home</a></div>
+        <div><a href="about.html" class="dropdown-link">About</a></div>
+        <div><a href="works.html" class="dropdown-link">Works</a></div>
+        <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+    </div>
 
-        <h1>Contact Us</h1>
-        <p>Get in touch with us through the form below.</p>
-        <div id="contact" class="dropdown-content">
-            <p><a href="mailto:justinvachel66@gmail.com">Email</a></p>
-            <p><a href="https://www.youtube.com/channel/UC_0vQAlw5WVAIJSV38byeOQ" target="_blank">YouTube</a></p>
-            <p><a href="https://www.instagram.com/justin_takes/" target="_blank">Instagram</a></p>
-            <p><a href="https://www.linkedin.com/in/justin-myat-70649631b/" target="_blank">LinkedIn</a></p>
+    <div class="contact-container">
+        <div class="contact-icons">
+            <a href="mailto:justinvachel66@gmail.com"><img src="images/Icons/mail.png" alt="Email"></a>
+            <a href="https://www.youtube.com/channel/UC_0vQAlw5WVAIJSV38byeOQ" target="_blank"><img src="images/Icons/youtube.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/justin_takes/" target="_blank"><img src="images/Icons/insta.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/justin-myat-70649631b/" target="_blank"><img src="images/Icons/link.png" alt="LinkedIn"></a>
         </div>
+    </div>
 
-
+    <button id="theme-toggle" class="theme-toggle">
+        <img src="images/Icons/moon.png" alt="Dark Mode" class="theme-icon dark-icon">
+        <img src="images/Icons/sun.png" alt="Light Mode" class="theme-icon light-icon">
+    </button>
+    <div class="glass-overlay"></div>
+    <canvas id="particle-canvas"></canvas>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+    <script>
+        // Initialize particle network
+        const canvas = document.getElementById('particle-canvas');
+        new ParticleNetwork(canvas);
+    </script>
 </body>
 </html>

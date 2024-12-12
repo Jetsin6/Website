@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Myat - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/Cube.png" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin Myat | Works</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/Cube.png" type="image/png">
 </head>
-
 <body>
-    
-    <div class="menu">
-            <div><a href="index.html" class="dropdown-link">Home</a></div>
-            <div><a href="about.html" class="dropdown-link">About</a></div>
-            <div><a href="works.html" class="dropdown-link">Works</a></div>
-            <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+  <div class="menu">
+    <div><a href="index.html" class="dropdown-link">Home</a></div>
+    <div><a href="about.html" class="dropdown-link">About</a></div>
+    <div><a href="works.html" class="dropdown-link">Works</a></div>
+    <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+  </div>
+
+  <div class="work-container">
+    <div class="work-card" onclick="showPopup('Christmas Cure')">
+      <img src="images/image 1.png" alt="Christmas Cancer">
+      <h3>Christmas Cancer</h3>
     </div>
-
-    <div id="canvas-container"></div>
-
-    
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span id="closePopup" class="close-button">X</span>
-            <h2 id="popupTitle" class="popupTitle"></h2>
-            <img id="popupImage" style="display:none;" alt="Project Image" />
-            <p id="popupDescription" class="popupDescription"></p>
-        </div>
+    <div class="work-card" onclick="showPopup('Planet Traprino')">
+      <img src="images/image 2.png" alt="Planet Traprino">
+      <h3>Planet Traprino</h3>
     </div>
+    <div class="work-card" onclick="showPopup('Camera Modeling')">
+      <img src="images/image 3.png" alt="Camera Modeling">
+      <h3>Camera Modeling</h3>
+    </div>
+    <div class="work-card" onclick="showPopup('ACMI Collaboration')">
+      <img src="images/image 5.png" alt="ACMI Collaboration">
+      <h3>ACMI Collaboration</h3>
+    </div>
+  </div>
 
-    <!-- Include Three.js and your custom script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Popup structure -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <img class="close" src="images/Icons/close.png" alt="Close" onclick="closePopup()">
+      <h2 id="popup-title"></h2>
+      <iframe id="popup-video" width="70%" height="315" style="display: none; margin-top: 15px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <video id="popup-video" controls style="width: 70%; margin-top: 15px; display: none;"></video>
+      <p id="popup-description"></p>
+      <img id="popup-image" src="" alt="Work Image" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </div>
 
+  <button id="theme-toggle" class="theme-toggle">
+    <img src="images/Icons/moon.png" alt="Dark Mode" class="theme-icon dark-icon">
+    <img src="images/Icons/sun.png" alt="Light Mode" class="theme-icon light-icon">
+  </button>
+  <script src="script.js"></script>
+  <div class="glass-overlay"></div>
+  <canvas id="particle-canvas"></canvas>
+  <script src="background.js"></script>
+  <script>
+    // Initialize particle network
+    const canvas = document.getElementById('particle-canvas');
+    new ParticleNetwork(canvas);
+  </script>
 </body>
 </html>
