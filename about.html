@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Myat | About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Cube.png" type="image/png">
+</head>
+<body class="no-scroll">
+    <div class="menu">
+        <div><a href="index.html" class="dropdown-link">Home</a></div>
+        <div><a href="about.html" class="dropdown-link">About</a></div>
+        <div><a href="works.html" class="dropdown-link">Works</a></div>
+        <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+    </div>
+    
+    <main>
+        <div class="profabout">
+            <img src="images/profile.JPG" alt="A description of my image" id="profile">
+            
+            <div class="abouttext">
+                <div class="abouttitle"> Hi! I'm Justin.</div>
+                I recently graduated with a Bachelor of Design from RMIT University and 
+                am currently exploring opportunities in 3D modeling, visual effects, and animation. I’m passionate about
+                creating material and texture work that brings ideas to life, with hands-on experience using tools like 
+                Maya and real-time rendering software. I’m also expanding my skills in ZBrush and Unreal Engine to continue 
+                evolving as a designer.
+                <br>
+                <br>
+                As a tech enthusiast, I love staying up-to-date with the latest advancements in hardware and software. When
+                I’m not working on creative projects, I enjoy personal computer building and photography. I'm eager to 
+                collaborate, learn, and make a meaningful impact in the creative industry.
+            </div>
+        
+
+
+                                <!-- Skills Section with Skill Bars -->
+                                <section class="skills">
+                                    <h2>Proficient Skills</h2>
+                                    <div class="skill">
+                                    <div id="label"><img src="images/AboutIcons/Maya.png" alt="Maya Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Blender.png" alt="Blender Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Unity1.png" alt="Unity Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/HTML.png" alt="HTML Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/CSS.png" alt="CSS Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Illustrator.png" alt="CSS Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Lightroom.png" alt="LR Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Photoshop.png" alt="PS Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Premiere.png" alt="PP Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/After Effects.png" alt="AE Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Stager.png" alt="SS Icon" class="skill-icon"></div>
+                                    <div id="label"><img src="images/AboutIcons/Substance.png" alt="SP Icon" class="skill-icon"></div>
+                                    </div>
+                                </section>     
+        </div>
+
+
+    </main>
+
+    <button id="theme-toggle" class="theme-toggle">
+        <img src="images/Icons/moon.png" alt="Dark Mode" class="theme-icon dark-icon">
+        <img src="images/Icons/sun.png" alt="Light Mode" class="theme-icon light-icon">
+    </button>
+    <script src="script.js"></script>
+    <div class="glass-overlay"></div>
+    <canvas id="particle-canvas"></canvas>
+    <script src="background.js"></script>
+    <script>
+        // Initialize particle network
+        const canvas = document.getElementById('particle-canvas');
+        new ParticleNetwork(canvas);
+    </script>
+</body>
+</html>
